@@ -1,4 +1,45 @@
-.App {
+body {
+  background-color: rgb(33, 4, 47);
+  color: white;
+  width: 250px;
+  font-family: monospace;
+  height: 100vh;
+}
+img {
+  max-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  animation: img-spin infinite 20s linear;
+
+  /* height: auto;
+  left: 50%;
+  object-fit: cover;
+
+  top: 50%;
+  width: 100%; */
+}
+/* .horned-beast img {
+  overflow: hidden;
+  position: relative;
+} */
+
+@keyframes img-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* .Main,
+h1 {
+  color: #442d0f;
+  text-shadow: 0 0 5px rgb(0 0 0 / 50%);
+} */
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +76,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
