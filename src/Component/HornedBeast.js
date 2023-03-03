@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function HornedBeast({ title, description, handleModal, beast, keyword, imageUrl, horns }) {
+export default function HornedBeast({ title, description, handleModal, beast, imageUrl }) {
   const [votes, setVotes] = useState(0);
 
   function handleVote() {
@@ -12,8 +12,6 @@ export default function HornedBeast({ title, description, handleModal, beast, ke
       <h2>{title}</h2>
       <img src={imageUrl} alt="" onClick={handleVote} />
       <p>Description:{description}</p>
-      <p>Keyword:{keyword}</p>
-      <p>Horns:{horns}</p>
       <p>Votes:{votes}</p>
     </div>
   );

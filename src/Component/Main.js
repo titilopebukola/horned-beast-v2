@@ -1,10 +1,11 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
 
-export default function Main({ data, handleModal }) {
+export default function Main({ data, handleModal, hornsFilter }) {
+  const filteredData = data.filter((beast) => !hornsFilter || beast.horns === parseInt(hornsFilter));
   return (
     <main>
-      {data.map((beast) => {
+      {filteredData.map((beast) => {
         return (
           <div className="horned-beast">
             <HornedBeast
@@ -19,17 +20,6 @@ export default function Main({ data, handleModal }) {
           </div>
         );
       })}
-
-      {/* <HornedBeast
-        title="Smaug"
-        imageUrl="https://qph.cf2.quoracdn.net/main-qimg-d7cceaac6251d5e158e25165e380e606-lq"
-        description="Smaug is the last of the Middle East dargon"
-      />
-      <HornedBeast
-        title="Rhino"
-        imageUrl="https://www.worldanvil.com/uploads/images/5d83dd7368765a511f416eb2186fe78d.jpg"
-        description=""
-      /> */}
     </main>
   );
 }
